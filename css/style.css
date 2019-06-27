@@ -1,0 +1,387 @@
+/*=============== default css start ================*/
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/*============= fonts start =============*/
+@font-face {
+  src: url(../fonts/Lato-Regular.ttf);
+  font-family: lr;
+}
+@font-face {
+  src: url(../fonts/Lato-Bold.ttf);
+  font-family: lb;
+}
+/*============= fonts stop =============*/
+/*============ scss @mixin =============*/
+/* transition */
+/* transform */
+/*=============== default css stop ================*/
+/*=================== navbar-css start ===================*/
+.navbar.navbar-expand-lg.navbar-light {
+  background: #f6f9f9;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: 24px;
+  color: #222222;
+  font-family: lr;
+  text-transform: capitalize;
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #15a4fa;
+}
+
+/*======================== banner part css start =======================*/
+#banner-area {
+  background: url(../images/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 217px;
+  padding-bottom: 90px;
+}
+
+.banner h1 {
+  font-size: 120px;
+  font-family: lb;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-bottom: 34px;
+  position: relative;
+}
+.banner h1:after {
+  position: absolute;
+  content: '';
+  width: 600px;
+  height: 2px;
+  background: #15A4FA;
+  bottom: 24px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.banner p {
+  font-size: 20px;
+  color: #fff;
+  font-family: lr;
+  padding-bottom: 45px;
+}
+.banner .btn.btn-outline-primary {
+  font-size: 18px;
+  font-family: lr;
+  color: #fff;
+  border-color: #15a4fa;
+  border-radius: 3px;
+  padding: 7px 21px;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+.banner .btn.btn-outline-primary:hover {
+  background: #15a4fa;
+  color: #fff;
+}
+.banner h4 {
+  padding-top: 166px;
+}
+.banner h4 i {
+  font-size: 17px;
+  color: #fff;
+}
+
+/*========================= simple part css start =========================*/
+#simple-part {
+  background: #f6f9f9;
+  padding-top: 80px;
+  padding-bottom: 110px;
+}
+
+.simple h3 {
+  font-size: 40px;
+  font-family: lr;
+  color: #2d3950;
+}
+.simple p {
+  font-size: 20px;
+  font-family: lr;
+  color: #999999;
+  line-height: 32px;
+  padding-top: 10px;
+}
+
+/*=========================== service-part css start ===========================*/
+#service-part {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.service-main .icon-main {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 0 auto;
+}
+.service-main .icon-main .icon-left {
+  width: 50px;
+  height: 100px;
+  background: #48baff;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  float: left;
+}
+.service-main .icon-main .icon-right {
+  width: 50px;
+  height: 100px;
+  background: #5fc3ff;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  float: left;
+}
+.service-main .icon-main i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 50px;
+  color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.service-main h4 {
+  font-size: 22px;
+  font-family: lr;
+  color: #2d3950;
+  padding-top: 25px;
+  padding-bottom: 9px;
+}
+.service-main p {
+  font-size: 15px;
+  font-family: lr;
+  color: #999999;
+  line-height: 22px;
+  padding: 0 32px;
+}
+
+/*============================ work-part css start ============================*/
+#work-part-area {
+  background: #f6f9f9;
+  padding-top: 70px;
+  padding-bottom: 116px;
+}
+
+.work-head h3 {
+  font-size: 41px;
+  font-family: lr;
+  color: #2d3950;
+  padding-bottom: 4px;
+}
+.work-head p {
+  font-size: 15px;
+  font-family: lr;
+  color: #909090;
+  padding-bottom: 60px;
+}
+
+.work-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+.work-item:hover .work-overlay {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+.work-item img {
+  border-radius: 3px;
+}
+.work-item .work-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(44, 172, 247, 0.9);
+  border-radius: 3px;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+}
+.work-item .work-overlay i {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: 1px solid #fff;
+  border-radius: 3px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  margin: 0 3px;
+}
+
+/*======================= form-part css start ======================*/
+#form-part {
+  background: url(../images/form_img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 75px;
+  padding-bottom: 97px;
+  position: relative;
+}
+#form-part:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(45, 56, 76, 0.9);
+}
+
+.form-head h3 {
+  font-size: 41px;
+  font-family: lr;
+  color: #fff;
+}
+.form-head p {
+  font-size: 15px;
+  font-family: lr;
+  color: #999999;
+  padding-top: 5px;
+  padding-bottom: 33px;
+}
+
+.form-item form .form-group {
+  padding-bottom: 5px;
+}
+.form-item form .form-group .form-control {
+  background: transparent;
+  border: 1px solid #999999;
+  width: 550px;
+  margin: 0 auto !important;
+  padding-left: 20px;
+  border-radius: 3px;
+  color: #fff;
+}
+.form-item form .form-group .form-control::placeholder {
+  font-size: 15px;
+  font-family: lr;
+  color: #999999;
+  text-transform: capitalize;
+}
+.form-item form .form-group #formGroupExampleInput {
+  height: 60px;
+  line-height: 60px;
+}
+.form-item form .form-group #exampleInputEmail1 {
+  height: 60px;
+  line-height: 60px;
+}
+.form-item form .form-group #comment {
+  height: 160px;
+  resize: none;
+  padding-top: 25px;
+}
+.form-item .btn.btn-outline-primary {
+  font-size: 18px;
+  font-family: lr;
+  color: #fff;
+  padding: 9px 48px;
+  margin-top: 10px;
+  border: 1px solid #15A4FA;
+  border-radius: 3px;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+.form-item .btn.btn-outline-primary:hover {
+  background: #15A4FA;
+  color: #fff;
+}
+
+/*======================== footer-area css start ========================*/
+#footer-area {
+  background: #f6f9f9;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.copyright-part p {
+  font-size: 15px;
+  font-family: lr;
+  color: #999999;
+  margin-bottom: 0;
+}
+
+.copyright-icon a i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #15a4fa;
+  border: 1px solid #15a4fa;
+  color: #fff;
+  border-radius: 3px;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+.copyright-icon a i:hover {
+  background: transparent;
+  color: #15a4fa;
+}

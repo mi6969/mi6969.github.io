@@ -1,0 +1,389 @@
+/*=============== default css start ================*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul,ol {
+    list-style-type: none;
+}
+img {
+    vertical-align: middle;
+}
+
+/*============= fonts start =============*/
+@font-face {
+    src: url(../fonts/Lato-Regular.ttf);
+    font-family: lr;
+}
+@font-face {
+    src: url(../fonts/Lato-Bold.ttf);
+    font-family: lb;
+}
+/*============= fonts stop =============*/
+
+/*============ scss @mixin =============*/
+/* transition */
+@mixin transition($property) {
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    -ms-transition: $property;
+    -o-transition: $property;
+    transition: $property;
+}
+
+/* transform */
+@mixin tfm($pro) {
+    -webkit-transform: $pro;
+    -moz-transform: $pro;
+    -ms-transform: $pro;
+    -o-transform: $pro;
+    transform: $pro;
+}
+
+$wh: #fff;
+$bl: #000;
+/*=============== default css stop ================*/
+
+/*=================== navbar-css start ===================*/
+.navbar.navbar-expand-lg.navbar-light {
+    background: #f6f9f9;
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+
+.navbar-light   {
+    .navbar-nav {
+        .nav-link {
+            font-size: 24px;
+            color: #222222;
+            font-family: lr;
+            text-transform: capitalize;
+            padding-left: 20px;
+	        padding-right: 20px;
+            @include transition(all linear .3s);
+            &:hover {
+               color: #15a4fa;
+            }
+              
+        }
+        
+    }
+}
+
+/*======================== banner part css start =======================*/
+#banner-area {
+    background: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 217px;
+    padding-bottom: 90px;
+}
+.banner {
+    h1 {
+        font-size: 120px;
+        font-family: lb;
+        color: #ffffff;
+        text-transform: uppercase;
+        padding-bottom: 34px;
+        position: relative;
+        &:after {
+            position: absolute;
+            content: '';
+            width: 600px;
+            height: 2px;
+            background: #15A4FA;
+            bottom: 24px;
+            left: 50%;
+            @include tfm(translateX(-50%));
+        }
+    }
+    p {
+        font-size: 20px;
+        color: $wh;
+        font-family: lr;
+        padding-bottom: 45px;
+    }
+    .btn.btn-outline-primary {
+        font-size: 18px;
+        font-family: lr;
+        color: $wh;
+        border-color: #15a4fa;
+        border-radius: 3px;
+        padding: 7px 21px;
+        @include transition(all linear .3s);
+        &:hover {
+            background: #15a4fa;
+            color: $wh;
+        }
+   }
+    h4 {
+        padding-top: 166px;
+        i {
+            font-size: 17px;
+            color: $wh;
+        }
+    }
+}
+
+/*========================= simple part css start =========================*/
+#simple-part {
+    background: #f6f9f9;
+    padding-top: 80px;
+    padding-bottom: 110px;
+}
+.simple {
+    h3 {
+        font-size: 40px;
+        font-family: lr;
+        color: #2d3950;
+    }
+    p {
+        font-size: 20px;
+        font-family: lr;
+        color: #999999;
+        line-height: 32px;
+        padding-top: 10px;
+    }
+}
+
+/*=========================== service-part css start ===========================*/
+#service-part {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+.service-main {
+    .icon-main {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        margin: 0 auto;
+        
+        .icon-left {
+            width: 50px;
+            height: 100px;
+            background: #48baff;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            float: left;
+        }
+        .icon-right {
+            width: 50px;
+            height: 100px;
+            background: #5fc3ff;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            float: left;
+        }
+        i {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            font-size: 50px;
+            color: $wh;
+            @include tfm(translate(-50%,-50%));
+        }
+    }
+    h4 {
+        font-size: 22px;
+        font-family: lr;
+        color: #2d3950;
+        padding-top: 25px;
+        padding-bottom: 9px
+    }
+    p {
+        font-size: 15px;
+        font-family: lr;
+        color: #999999;
+        line-height: 22px;
+        padding: 0 32px;
+    }
+}
+
+/*============================ work-part css start ============================*/
+#work-part-area {
+    background: #f6f9f9;
+    padding-top: 70px;
+    padding-bottom: 116px;
+}
+.work-head {
+    h3 {
+        font-size: 41px;
+        font-family: lr;
+        color: #2d3950;
+        padding-bottom: 4px;
+    }
+    p {
+        font-size: 15px;
+        font-family: lr;
+        color: #909090;
+        padding-bottom: 60px;
+    }
+}
+.work-item {
+    position: relative;
+    margin-bottom: 30px;
+    &:hover {
+        .work-overlay {
+            @include tfm(scale(1));
+            opacity: 1;
+        }
+    }
+    img {
+        border-radius: 3px;
+    }
+    .work-overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(44, 172, 247, .9);
+        border-radius: 3px;
+        @include transition(all linear .3s);
+        @include tfm(scale(0));
+        opacity: 0;
+        
+        i {
+            position: relative;
+            top: 50%;
+            @include tfm(translateY(-50%));
+            border: 1px solid $wh;
+            border-radius: 3px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            color: $wh;
+            margin: 0 3px;
+        }
+    }
+}
+
+/*======================= form-part css start ======================*/
+#form-part {
+    background: url(../images/form_img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 75px;
+    padding-bottom: 97px;
+    position: relative;
+    &:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(45, 56, 76, .9);
+    }
+}
+
+.form-head  {
+    h3 {
+        font-size: 41px;
+        font-family: lr;
+        color: $wh;
+    }
+    p {
+        font-size: 15px;
+        font-family: lr;
+        color: #999999;
+        padding-top: 5px;
+        padding-bottom: 33px;
+    }
+}
+
+.form-item {
+    form {
+        .form-group {
+            padding-bottom: 5px;
+            .form-control {
+                background: transparent;
+                border: 1px solid #999999;
+                width: 550px;
+                margin: 0 auto !important;
+                padding-left: 20px;
+                border-radius: 3px;
+                color: $wh;
+                &::placeholder {
+                    font-size: 15px;
+                    font-family: lr;
+                    color: #999999;
+                    text-transform: capitalize;
+                }
+            }
+            
+            #formGroupExampleInput {
+                height: 60px;
+                line-height: 60px;
+            }
+            
+            #exampleInputEmail1 {
+                height: 60px;
+                line-height: 60px;
+            }
+            
+            #comment {
+                height: 160px;
+                resize: none;
+                padding-top: 25px;
+            }
+            
+        }
+    }
+    
+    .btn.btn-outline-primary {
+	    font-size: 18px;
+        font-family: lr;
+        color: #fff;
+        padding: 9px 48px;
+        margin-top: 10px;
+        border: 1px solid #15A4FA;
+        border-radius: 3px;
+        @include transition(all linear .3s);
+        &:hover {
+            background: #15A4FA;
+            color: $wh;
+        }
+      }
+}
+
+/*======================== footer-area css start ========================*/
+#footer-area {
+    background: #f6f9f9;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.copyright-part p {
+    font-size: 15px;
+    font-family: lr;
+    color: #999999;
+    margin-bottom: 0;
+}
+.copyright-icon {
+    a {
+        i {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #15a4fa;
+            border: 1px solid #15a4fa;
+            color: $wh;
+            border-radius: 3px;
+            @include transition(all linear .3s);
+            &:hover {
+                background: transparent;
+                color: #15a4fa;
+            }
+        }
+    }
+}
